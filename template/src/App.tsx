@@ -1,7 +1,9 @@
-export default function App() {
+function App() {
   return (
-    <div >
+    <div>
       <h1>Simple TS Template</h1>
     </div>
   );
 }
+
+export default App;
