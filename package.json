@@ -8,14 +8,20 @@
     "template",
     "typescript"
   ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  },
+  "scripts": {
+    "release": "standard-version"
+  },
+  "devDependencies": {
+    "standard-version": "^9.3.1"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/sitek94/cra-template-maciek.git",
     "directory": "cra-template-maciek"
-  },
-  "license": "MIT",
-  "engines": {
-    "node": ">=14"
   },
   "bugs": {
     "url": "https://github.com/sitek94/cra-template-maciek/issues"
