@@ -1,0 +1,21 @@
+{
+  "name": "cra-template-maciek",
+  "version": "1.0.0",
+  "description": "Super simple TypeScript template for Create React App.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/facebook/create-react-app.git",
+    "directory": "cra-simple-ts"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  },
+  "bugs": {
+    "url": "https://github.com/facebook/create-react-app/issues"
+  },
+  "files": [
+    "template",
+    "template.json"
+  ]
+}
