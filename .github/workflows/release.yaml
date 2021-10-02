@@ -1,0 +1,30 @@
+on:
+  release:
+    types: [published]
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.2.0
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.release.tag_name }}
+      - uses: bahmutov/npm-install@v1
+      - name: Get tag
+        run: |
+          echo "::set-env name=HEAD_TAG::$(git tag --points-at HEAD)"
+      - name: Create release
+        run: |
+          git config --global user.name 'sitek94'
+          git config --global user.email 'msitkowski94@gmail.com'
+          git tag -d $HEAD_TAG
+          yarn run release --skip.tag --release-as $HEAD_TAG
+          git push origin HEAD:master
+      - name: Publish npm package
+        run: |
+          npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
+          npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_ACCESS_TOKEN}}
