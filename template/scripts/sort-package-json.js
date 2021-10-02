@@ -2,6 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const sortPackageJson = require('sort-package-json');
+const simpleGit = require('simple-git');
 
 // Get package.json path
 const packageJsonPath = path.resolve(__dirname, '../package.json');
@@ -39,3 +40,8 @@ if (sorted !== file) {
   fs.writeFileSync(packageJsonPath, sorted, 'utf8');
   console.log(`Sorted package.json!`);
 }
+
+// Commit
+const git = simpleGit();
+git.add('package.json');
+git.commit('chore: organize package.json');
