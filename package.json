@@ -1,7 +1,7 @@
 {
   "name": "cra-template-maciek",
   "description": "Super simple TypeScript template for Create React App.",
-  "version": "0.0.1-alpha",
+  "version": "0.0.2-alpha",
   "keywords": [
     "react",
     "create-react-app",
