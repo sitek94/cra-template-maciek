@@ -1,5 +1,7 @@
 # cra-template-maciek
 
+[![npm](https://img.shields.io/npm/v/cra-template-maciek?style=plastic)](https://www.npmjs.com/package/cra-template-maciek)
+
 This is a [Create React App TypeScript template](https://github.com/facebook/create-react-app) with some additional tweaks.
 
 To use this template, add `--template maciek` when creating a new app.
